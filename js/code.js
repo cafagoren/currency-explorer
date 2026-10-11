@@ -67,11 +67,11 @@ const url = `https://api.frankfurter.dev/v2/rate/${monedaOrigen.toLowerCase()}/$
 }
 
 function intercambiarMonedas() {
-  // TODO · MISIÓN 06:
-  // 1) guardar temporalmente el valor de origen
-  // 2) intercambiar origen.value y destino.value
-  // 3) volver a calcular
-  mostrarError("Misión 06 pendiente: implementa el intercambio de monedas.");
+  const monedaTemporal = origen.value;
+  origen.value = destino.value;
+  destino.value = monedaTemporal;
+
+  convertirMoneda();
 }
 
 // 4. UTILIDADES DE INTERFAZ

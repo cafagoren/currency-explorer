@@ -67,19 +67,32 @@ async function convertirMoneda() {
 
   try {
     const respuesta = await fetch(url);
+
+    // MISIÓN 09: Comprobar response.ok y lanzar error HTTP si la respuesta no es exitosa
+    if (!respuesta.ok) {
+      throw new Error(`Error en el servidor o divisa no disponible (Código HTTP: ${respuesta.status})`);
+    }
+
     const datos = await respuesta.json();
+
+    // MISIÓN 05: Cálculo dinámico de conversión y formato en el DOM
     const conversion = valor * datos.rate;
 
     resultado.classList.remove("error");
-    resultadoTexto.textContent =
-      `${valor.toFixed(2)} ${monedaOrigen} = ${conversion.toFixed(2)} ${monedaDestino}`;
-    detalleTasa.textContent =
-      `1 ${monedaOrigen} = ${datos.rate} ${monedaDestino} · ${datos.date}`;
+    resultadoTexto.textContent = `${valor.toFixed(2)} ${monedaOrigen} = ${conversion.toFixed(2)} ${monedaDestino}`;
+    detalleTasa.textContent = `1 ${monedaOrigen} = ${datos.rate} ${monedaDestino} · ${datos.date}`;
+
   } catch (error) {
-    mostrarError("No fue posible completar la consulta.");
-    console.error(error);
+    // MISIÓN 09: Gestión de errores diferenciada (red vs HTTP)
+    console.error("Detalle del error:", error);
+
+    const mensajeDetallado = error.message.includes("Código HTTP")
+      ? error.message
+      : "Error de conexión o fallo al consultar el servicio.";
+
+    mostrarError(mensajeDetallado);
   } finally {
-    // Reactivar los botones tanto si la consulta funciona como si falla
+    // Restaurar los botones tanto si hubo éxito como si hubo error
     btnConvertir.disabled = false;
     btnIntercambiar.disabled = false;
   }

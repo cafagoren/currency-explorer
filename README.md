@@ -12,10 +12,10 @@
 | 04 | Moreno Medrano Paul | Velazquez Jinez Omar | feature/mision-04-monedas-dinamicas — PR #1|
 | 05 | Velazquez Jinez Omar | Moreno Medrano Paul | feat(mision-05): calculo dinamico de conversion y formateo con toFixed — PR #2|
 | 06 | Moreno Medrano Paul | Velazquez Jinez Omar | feature/mision-06: permitir el intercambio de monedas seleccionadas — PR #3|
-| 07 | Velazquez Jinez Omar | Moreno Medrano Paul | feat(mision-07): validacion de entradas completa — PR #4|
-| 08 | Moreno Medrano Paul | Velazquez Jinez Omar | feature/mision-06: mostrar estado de craga — PR #5|
-| 09 | | | |
-| 10 | | | |
+| 07 | Velazquez Jinez Omar | Moreno Medrano Paul | feat(mision-07): validacion de datos de entrada — PR #4|
+| 08 | Moreno Medrano Paul | Velazquez Jinez Omar | feature/mision-08: agregar un estado de carga — PR #6|
+| 09 | Velazquez Jinez Omar | Moreno Medrano Paul | feat(mision-09): manejo de errores (try y catch) — PR #7|
+| 10 | Moreno Medrano Paul | Velazquez Jinez Omar | feature/mision-10: integracion de diseño responsive — PR #8|
 
 ## Objetivo
 Completar una aplicación frontend que consuma Frankfurter API para convertir divisas y demostrar comprensión de eventos, DOM, `fetch()`, JSON, asincronía, validación y manejo de errores.

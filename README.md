@@ -11,7 +11,7 @@
 |---|---|---|---|
 | 04 | Moreno Medrano Paul | Velazquez Jinez Omar | feature/mision-04-monedas-dinamicas — PR #1|
 | 05 | Velazquez Jinez Omar | Moreno Medrano Paul | feat(mision-05): calculo dinamico de conversion y formateo con toFixed — PR #2|
-| 06 | | | |
+| 06 | Moreno Medrano Paul | Velazquez Jinez Omar | feature/mision-06: validacion de entradas completa — PR #3|
 | 07 | | | |
 | 08 | | | |
 | 09 | | | |

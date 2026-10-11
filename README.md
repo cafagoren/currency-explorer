@@ -9,8 +9,8 @@
 ## Pair Programming
 | Misión | Driver | Navigator | Commit / evidencia |
 |---|---|---|---|
-| 04 | Moreno Medrano Paul | Velazquez Jinez Omar | feature/mision-04-monedas-dinamicas|
-| 05 | | | |
+| 04 | Moreno Medrano Paul | Velazquez Jinez Omar | feature/mision-04-monedas-dinamicas — PR #1|
+| 05 | Velazquez Jinez Omar | Moreno Medrano Paul | feat(mision-05): calculo dinamico de conversion y formateo con toFixed — PR #2|
 | 06 | | | |
 | 07 | | | |
 | 08 | | | |
@@ -33,8 +33,8 @@ Endpoint de referencia:
 ## Decisiones técnicas
 Registra aquí al menos dos decisiones tomadas por la pareja y explica por qué.
 
-1. 
-2. 
+1. Construir la URL de la API con las monedas seleccionadas y convertir sus códigos a minúsculas para formar el endpoint usado por el proyecto.
+2. Si la moneda de origen y destino son iguales, mostrar el mismo importe con tasa 1.00 y evitar una consulta innecesaria a la API.
 
 ### Revisión cruzada · Misión 04
 - **Aspecto bien resuelto:** La lectura directa de `origen.value` y `destino.value` 

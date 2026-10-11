@@ -22,11 +22,28 @@ async function convertirMoneda() {
   // Misiones guiadas 1-3: ya existe un flujo mínimo funcional EUR -> USD.
   // A partir de la Misión 4 debes convertirlo en una solución dinámica.
 
-  const valor = Number(cantidad.value);
+const valorTexto = cantidad.value.trim();
 
-  // TODO · MISIÓN 07: sustituir esta validación mínima por una validación completa.
-  if (!Number.isFinite(valor) || valor <= 0) {
-    mostrarError("Escribe una cantidad mayor que cero.");
+  // 1) Comprobar si el campo está vacío o con espacios
+  if (valorTexto === "") {
+    mostrarError("Ingresa una cantidad para convertir.");
+    cantidad.focus();
+    return;
+  }
+
+  const valor = Number(valorTexto);
+
+  // 2) Comprobar que sea un número real y finito
+  if (!Number.isFinite(valor) || isNaN(valor)) {
+    mostrarError("El valor ingresado debe ser un número válido.");
+    cantidad.focus();
+    return;
+  }
+
+  // 3) Comprobar que sea estrictamente mayor que cero
+  if (valor <= 0) {
+    mostrarError("La cantidad debe ser mayor que cero.");
+    cantidad.focus();
     return;
   }
 

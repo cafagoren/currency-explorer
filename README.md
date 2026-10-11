@@ -11,9 +11,9 @@
 |---|---|---|---|
 | 04 | Moreno Medrano Paul | Velazquez Jinez Omar | feature/mision-04-monedas-dinamicas — PR #1|
 | 05 | Velazquez Jinez Omar | Moreno Medrano Paul | feat(mision-05): calculo dinamico de conversion y formateo con toFixed — PR #2|
-| 06 | Moreno Medrano Paul | Velazquez Jinez Omar | feature/mision-06: validacion de entradas completa — PR #3|
-| 07 | | | |
-| 08 | | | |
+| 06 | Moreno Medrano Paul | Velazquez Jinez Omar | feature/mision-06: permitir el intercambio de monedas seleccionadas — PR #3|
+| 07 | Velazquez Jinez Omar | Moreno Medrano Paul | feat(mision-07): validacion de entradas completa — PR #4|
+| 08 | Moreno Medrano Paul | Velazquez Jinez Omar | feature/mision-06: mostrar estado de craga — PR #5|
 | 09 | | | |
 | 10 | | | |
 
@@ -36,11 +36,11 @@ Registra aquí al menos dos decisiones tomadas por la pareja y explica por qué.
 1. Construir la URL de la API con las monedas seleccionadas y convertir sus códigos a minúsculas para formar el endpoint usado por el proyecto.
 2. Si la moneda de origen y destino son iguales, mostrar el mismo importe con tasa 1.00 y evitar una consulta innecesaria a la API.
 
-### Revisión cruzada · Misión 04
-- **Aspecto bien resuelto:** La lectura directa de `origen.value` y `destino.value` 
-- **Aspecto mejorable detectado:** Los códigos de divisa de los `<select>` estaban en mayúsculas (`EUR`, `USD`), mientras que la ruta recomendada de la API suele requerir o estandarizar los parámetros en minúsculas para evitar inconsistencias 
-- **Propuesta del revisor:** Normalizar los valores leídos aplicando `.toLowerCase()` a las variables de origen y destino antes de concatenarlas 
-- **Cambio aplicado:** Se actualizó la constante de la URL a `` `https://api.frankfurter.dev/v2/rate/${monedaOrigen.toLowerCase()}/${monedaDestino.toLowerCase()}` `` para asegurar compatibilidad total con el endpoint
+## Revisión cruzada
+- Aspecto bien resuelto:
+- Error o comportamiento mejorable:
+- Propuesta de mejora:
+- Cambio incorporado después de la revisión:
 
 ## Reflexión final (150–200 palabras)
 Explica el principal aprendizaje técnico, una dificultad relevante y una decisión que haya surgido del trabajo Driver/Navigator.

@@ -34,6 +34,14 @@ async function convertirMoneda() {
 const monedaOrigen = origen.value;
 const monedaDestino = destino.value;
 
+// MISIÓN 05 (Caso borde): Optimización si ambas monedas son iguales
+  if (monedaOrigen === monedaDestino) {
+    resultado.classList.remove("error");
+    resultadoTexto.textContent = `${valor.toFixed(2)} ${monedaOrigen} = ${valor.toFixed(2)} ${monedaDestino}`;
+    detalleTasa.textContent = `1 ${monedaOrigen} = 1.00 ${monedaDestino} · Monedas idénticas`;
+    return;
+  }
+
 const url = `https://api.frankfurter.dev/v2/rate/${monedaOrigen.toLowerCase()}/${monedaDestino.toLowerCase()}`;
 
   try {
@@ -44,6 +52,8 @@ const url = `https://api.frankfurter.dev/v2/rate/${monedaOrigen.toLowerCase()}/$
     const datos = await respuesta.json();
 
     const conversion = valor * datos.rate;
+
+
 
     resultado.classList.remove("error");
     resultadoTexto.textContent = `${valor.toFixed(2)} ${monedaOrigen} = ${conversion.toFixed(2)} ${monedaDestino}`;
